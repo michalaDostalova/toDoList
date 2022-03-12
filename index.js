@@ -2,7 +2,7 @@ const elFormt = document.querySelector(".form")
 const elInput = document.querySelector(".input")
 const elUl = document.querySelector(".list")
 let list = JSON.parse(localStorage.getItem("list"))
-
+list = []
 list.forEach(task=>{
     toDoapp(task)
 })
@@ -52,7 +52,7 @@ function toDoapp(task) {
 
 function storage (){
    const elLis = document.querySelectorAll('li')
-  list = []
+  
     elLis.forEach((elLi)=>{
        list.push({
            name:elLi.innerText,
